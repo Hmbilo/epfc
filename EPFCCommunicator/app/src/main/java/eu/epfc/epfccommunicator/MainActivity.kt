@@ -3,6 +3,7 @@ package eu.epfc.epfccommunicator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -39,5 +40,25 @@ class MainActivity : AppCompatActivity() {
 
         intent.putExtra(Intent.EXTRA_TEXT, editTextString)
         startActivity(intent)
+    }
+
+    fun showMap(geoLocation : Uri){
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            data = geoLocation
+        }
+
+        //if(intent.resolveActivity(packageManager) != null) {
+        // startActivity(intent)
+        //}
+
+        startActivity(intent)
+    }
+
+    fun OnSearchButtonClicked(view: View){
+        val address : EditText = findViewById(R.id.edit_map_address)
+        val editTextString = address.text.toString().trim()
+        val addressUri = Uri.parse("geo:0,0?q=$editTextString")
+
+        showMap(addressUri)
     }
 }

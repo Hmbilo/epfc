@@ -36,4 +36,21 @@
             android:onClick="OnShareButtonClicked"
             />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_map_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/map_placeholder">
+    </EditText>
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:text="@string/search"
+        android:onClick="OnSearchButtonClicked"
+        />
+
 </LinearLayout>
