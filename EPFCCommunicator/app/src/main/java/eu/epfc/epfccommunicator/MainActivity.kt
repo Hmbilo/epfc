@@ -29,4 +29,15 @@ class MainActivity : AppCompatActivity() {
 
         startActivity(intent)
     }
+
+    fun OnShareButtonClicked(view: View){
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "text/plain"
+
+        val messageEditText : EditText = findViewById(R.id.edit_text_message)
+        val editTextString = messageEditText.text.toString()
+
+        intent.putExtra(Intent.EXTRA_TEXT, editTextString)
+        startActivity(intent)
+    }
 }

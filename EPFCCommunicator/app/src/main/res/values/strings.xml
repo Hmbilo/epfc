@@ -2,6 +2,7 @@
     <string name="app_name">EPFCCommunicator</string>
     <string name="message_placeholder">Enter a message...</string>
     <string name="send">Send!</string>
+    <string name="share">Share</string>
     <string name="page_text">This is the ReceiveMessage Activity</string>
 </resources>
 
