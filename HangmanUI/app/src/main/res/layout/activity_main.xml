@@ -6,108 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    >
+    android:id="@+id/root_layout">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GUESS THE WORD"
-        android:textSize="24sp"
+        android:id="@+id/page_title"
         android:layout_margin="64dp"
-        android:layout_gravity="center_horizontal"
-
-        />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="*******"
-        android:textSize="24sp"
-        android:layout_margin="32dp"
+        android:text="@string/title"
         android:layout_gravity="center_horizontal"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/maskedWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temporary_masked_word"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="32dp"
+        android:textSize="24sp"
+
         />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="28dp"
-        android:orientation="horizontal">
-
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_margin="32dp"
+        >
         <View
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_width="48dp"
-            android:background="@android:color/holo_red_light"
             android:id="@+id/rectangle1"
-            />
-
-        <View
+            android:layout_width="40dp"
             android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_width="48dp"
             android:background="@android:color/holo_red_light"
+            android:layout_margin="8dp"/>
+        <View
             android:id="@+id/rectangle2"
-            />
-
-        <View
+            android:layout_width="40dp"
             android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_width="48dp"
             android:background="@android:color/holo_red_light"
+            android:layout_margin="8dp"/>
+        <View
             android:id="@+id/rectangle3"
-            />
-
-        <View
+            android:layout_width="40dp"
             android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_width="48dp"
             android:background="@android:color/holo_red_light"
+            android:layout_margin="8dp"/>
+        <View
             android:id="@+id/rectangle4"
-            />
-
-        <View
+            android:layout_width="40dp"
             android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_width="48dp"
             android:background="@android:color/holo_red_light"
+            android:layout_margin="8dp"/>
+        <View
             android:id="@+id/rectangle5"
-            />
-
-        <View
+            android:layout_width="40dp"
             android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_width="48dp"
             android:background="@android:color/holo_red_light"
+            android:layout_margin="8dp"/>
+        <View
             android:id="@+id/rectangle6"
-            />
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_red_light"
+            android:layout_margin="8dp"/>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        >
 
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="32dp"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter a letter :"
-            android:textSize="18sp"/>
-
+            android:text="@string/enter_a_letter"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
         <EditText
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"/>
-
+            android:id="@+id/editText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            />
         <Button
-            android:layout_width="55dp"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="Ok"
+            android:text="@string/ok"
             android:onClick="onClickOkButton"
             />
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/retry"
+        android:onClick="onRetryButton"
+        />
 
 </LinearLayout>
